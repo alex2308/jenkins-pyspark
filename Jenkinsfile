@@ -3,8 +3,8 @@ node {
     checkout scm
     }
    stage('build image') {
-         echo "building docker image"
-         sh 'pip3 install -r requirements.txt'
+         echo "building python dependencies"
+         sh 'pip install -r requirements.txt'
       }
    stage('test') {
       echo "running test through docker"
