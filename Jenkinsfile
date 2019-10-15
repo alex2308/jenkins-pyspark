@@ -2,12 +2,12 @@ node {
     stage('checkout'){
     checkout scm
     }
-   stage('compile') {
-         echo "compiling python project"
-         sh 'pip install -r requirements.txt'
+   stage('build image') {
+         echo "building docker image"
+         sh 'pip3 install -r requirements.txt'
       }
    stage('test') {
-      echo "Testings python project"
+      echo "running test through docker"
       sh "pytest"
    }
 
