@@ -1,0 +1,6 @@
+/venv
+/.cache
+/.idea
+/build
+/dist
+/example.egg-info
